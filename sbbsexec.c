@@ -40,10 +40,15 @@
 #include <vddsvc.h>
 #include "uartdefs.h"
 #include "vdd_func.h"
+
+#define RINGBUF_SEM
 #include "ringbuf.h"
 #include "genwrap.h"
 #include "dirwrap.h"
 #include "threadwrap.h"
+
+// Disable socket support from ini_file
+#define NO_SOCKET_SUPPORT
 #include "ini_file.h"
 
 #define INI_FILENAME			"sbbsexec.ini"
