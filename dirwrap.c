@@ -82,6 +82,13 @@
 #include <stdlib.h>		/* rand */
 #include <errno.h>		/* ENOENT definitions */
 
+// HACK
+#define stat _stat
+//#define utime _utime
+#define fstat _fstat
+
+// END HACK
+
 #include "genwrap.h"	/* strupr/strlwr */
 #include "dirwrap.h"	/* DLLCALL */
 
@@ -413,7 +420,7 @@ int DLLCALL setfdate(const char* filename, time_t t)
 	ut.actime=t;
 	ut.modtime=t;
 
-	return(utime(filename,&ut));
+	return(_utime(filename,&ut));
 }
 
 /****************************************************************************/

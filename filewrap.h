@@ -85,6 +85,7 @@
 	#else
 		#define fseeko			fseek
 		#define ftello			ftell
+                #define fstat _fstat
 	#endif
 
 #elif defined(__unix__)
