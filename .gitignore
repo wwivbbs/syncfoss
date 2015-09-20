@@ -195,6 +195,5 @@ FakesAssemblies/
 *.cmake
 CMakeFiles
 CMakeCache.txt
-Makefile
 *.a
 
