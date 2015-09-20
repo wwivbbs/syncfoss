@@ -41,7 +41,6 @@
 #include "uartdefs.h"
 #include "vdd_func.h"
 
-#define RINGBUF_SEM
 #include "ringbuf.h"
 #include "genwrap.h"
 #include "dirwrap.h"
