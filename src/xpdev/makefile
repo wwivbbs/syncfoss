@@ -18,7 +18,7 @@ LINK = link
 CFLAGS = /nologo /Gz /MT /W3 /EHsc /O2 /D "NDEBUG" /D "i386" /D "WIN32" \
          /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "SBBSEXEC_EXPORTS" \
 	 /D "RINGBUF_SEM" /D "RINGBUF_MUTEX" /FD /c \
-	 /I %CRT_INC_PATH%
+	 /I $(CRT_INC_PATH)
 
 LFLAGS = /machine:I386 \
          /LIBPATH:C:\WINDDK\7600.16385.1\lib\crt\i386 \
