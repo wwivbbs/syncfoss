@@ -9,8 +9,8 @@ CC = cl
 LINK = link
 CFLAGS = /nologo /Gz /MT /W3 /EHsc /O2 \
 		 /I "..\xpdev" \
-		 /I %CRT_INC_PATH% \
-		 /I %SDK_INC_PATH% \
+		 /I $(CRT_INC_PATH) \
+		 /I $(SDK_INC_PATH) \
 		 /D "NDEBUG" /D "i386" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" \
 		 /D "SBBSEXEC_EXPORTS" /D "RINGBUF_SEM" /D "RINGBUF_MUTEX" /FD \
 		 /c
@@ -31,7 +31,7 @@ sbbsexec.dll: $(OBJS) $(XPDEV_LIB)
 $(XPDEV_LIB):
 	cd ..\xpdev
 	cd
-	nmake /fmakefile
+	$(MAKE) /fmakefile
 	cd
 	cd ..\sbbsexec
 	cd
@@ -42,3 +42,8 @@ clean:
 	del sbbsexec.exp
 	del sbbsexec.lib
 	del vc90.idb
+	cd ..\xpdev
+	cd
+	$(MAKE) /fmakefile clean
+	cd
+	cd ..\sbbsexec

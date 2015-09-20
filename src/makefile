@@ -6,11 +6,11 @@ all: $(SBBSEXEC_DLL)
 
 $(SBBSEXEC_DLL):
 	cd sbbsexec
-	nmake /fmakefile
+	$(MAKE) /fmakefile
 
 clean:
 	cd sbbsexec
-	nmake /fmakefile clean
+	$(MAKE) /fmakefile clean
 	cd ..\xpdev
-	nmake /fmakefile clean
+	$(MAKE) /fmakefile clean
 
