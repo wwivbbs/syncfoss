@@ -18,7 +18,7 @@ LFLAGS = /dll \
          /LIBPATH:..\xpdev \
          /LIBPATH:C:\WINDDK\7600.16385.1\lib\crt\i386 \
          /LIBPATH:C:\WINDDK\7600.16385.1\lib\win7\i386 \
-         /machine:I386 /nologo
+         /machine:I386 /nologo /WX
 XPDEV_LIB = ..\xpdev\xpdev.lib
 LIBS = xpdev.lib ntvdm.lib ws2_32.lib msvcprt.lib
 
