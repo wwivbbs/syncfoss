@@ -10,3 +10,5 @@ Requires (from MSDN Subscription)
 
 Requires (from internet) 
 * [Windows Driver Kit Version 7.1.0](http://www.microsoft.com/en-us/download/details.aspx?id=11800) [filename is GRMWDK_EN_7600_1.ISO, installed in C:\winddk\7600.16385.1)
+
+Note that the Windows XP DDK is the last one that supports VDDs according to this [support bulleting from Microsoft](https://support.microsoft.com/en-us/kb/322643).
